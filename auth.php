@@ -13,7 +13,7 @@ if(isset($_GET['code'])){
   $fp = fopen(ACCESS_TOKEN, 'w+');
   fwrite($fp, json_encode($client->getAccessToken()));
   fclose($fp);
-  header('Location: http://' . $_SERVER['HTTP_HOST'] . '/youtube_api/app.php');
+  header('Location: http://' . $_SERVER['HTTP_HOST'] . '/app.php');
 }
 
 if(!isset($_GET['code'])){

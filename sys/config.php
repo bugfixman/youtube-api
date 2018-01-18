@@ -10,7 +10,7 @@ function clientInit(){
 	$client->setAccessType('offline');
 	$client->setApprovalPrompt("force");
 	$client->setScopes('https://www.googleapis.com/auth/youtube');
-	$redirect = filter_var('http://' . $_SERVER['HTTP_HOST'] . '/youtube_api/auth.php', FILTER_SANITIZE_URL);
+	$redirect = filter_var('http://' . $_SERVER['HTTP_HOST'] . '/auth.php', FILTER_SANITIZE_URL);
 	$client->setRedirectUri($redirect);
 	return $client;
 }
